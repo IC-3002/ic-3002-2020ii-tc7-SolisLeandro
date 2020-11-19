@@ -87,8 +87,6 @@ def aux_encontrar_ruta(arr,rutaArr,x,y,guiaPar):
     rutaArr[y][x]=0
     return False
         
-    
-
 def encontrar_ruta(C):
     rutaArr=[]
     for i in C:
@@ -96,13 +94,5 @@ def encontrar_ruta(C):
         for e in i:
             tempArr.append(0)
         rutaArr.append(tempArr)
-    imprimirMatriz(C)
     return aux_encontrar_ruta(C,rutaArr,0,0,True)
     
-def imprimirMatriz(arr):
-    for i in arr:
-        for e in i:
-            print (str(e)+" ",end="")
-        print("")
-            
-imprimirMatriz(encontrar_ruta([[0,0,0,0],[0,0,0,1],[0,1,1,0],[0,0,0,0]]))
